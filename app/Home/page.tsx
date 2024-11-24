@@ -1,5 +1,12 @@
 // @ts-ignore
 import Link from 'next/link';
+// @ts-ignore
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Café mania - Home",
+  description: "PIT -2",
+};
 
 export default function Home() {
   return (

@@ -1,5 +1,12 @@
 // @ts-ignore
 import Link from 'next/link';
+// @ts-ignore
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Café mania - Produtos",
+  description: "PIT -2",
+};
 
 export default function Produtos() {
   return (
