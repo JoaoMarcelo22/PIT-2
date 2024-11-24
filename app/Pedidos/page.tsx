@@ -97,10 +97,17 @@ export default function Pedidos() {
           </div>
         </div>
       </div>
-      <div className='absolute bottom-[50px] w-[500px] flex justify-center'>
+      <div className='absolute bottom-[50px] w-[500px] flex justify-around'>
+        <div>
         <Link href="/Home">
           <img src='Voltar.png' height="100px" width="200px"/>
         </Link>
+        </div>
+        <div>
+          <Link href="/FinalizarPedido">
+          <img src='Continuar.png' height="100px" width="200px"/>
+        </Link>
+        </div>
       </div>
     </div>
   );
