@@ -1,30 +1,29 @@
+// @ts-ignore
 import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="items-center justify-items-center">
-      <img src="pg_01.png" alt="arroz" className="h-[900px] w-[500px] mt-2 rounded-3xl z-1" />
-      <p className="text-[60px] font-bold absolute top-1 left-[815px] z-02">Café Mania</p>
-      <div className="flex justify-evenly absolute bottom-[50px] right-[710px] w-[550px]">
+    <div className="w-[500px] h-[900px] bg-[url('/pg_01.png')] rounded-3xl m-auto bg-cover bg-no-repeat bg-center flex-row items-center">
+      <div className='text-center'>
+      <p className="text-[60px] font-bold mb-20">Café Mania</p>
+      </div>
+      <div className="flex justify-evenly absolute bottom-[50px]  w-[500px]">
         <div>
-          <a href="#">
+          <Link href="/Home">
             <img src="facebook.png" alt="Facebook" className="h-[50px] mx-[5px] z-02" />
-          </a>
+          </Link>
         </div>
         <div>
-          <a href="#">
+          <Link href="/Home">
             <img src="x.png" alt="Twitter" className="h-[50px] mx-[0px] z-02" />
-          </a>
+          </Link>
         </div>
         <div>
-          <a href="#">
+        <Link href="/Home">
             <img src="google.png" alt="google" className="h-[50px] mx-[5px] z-02 " />
-          </a>
+        </Link>
         </div>
       </div>
-      <p>
-        <Link href="/pg2">PG2</Link>
-      </p>
     </div>
   );
 }

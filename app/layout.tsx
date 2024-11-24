@@ -1,4 +1,6 @@
+// @ts-ignore
 import type { Metadata } from "next";
+// @ts-ignore
 import localFont from "next/font/local";
 import "./globals.css";
 
