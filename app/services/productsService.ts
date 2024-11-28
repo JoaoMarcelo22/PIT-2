@@ -56,6 +56,7 @@ export function useOrderService() {
     fetchProducts();
   }, []);
 
+  // Adicionar produto ao pedido
   const handleAddToOrder = (product: Product) => {
     setTotalPrice((prev) => prev + product.price);
 
@@ -68,7 +69,27 @@ export function useOrderService() {
     setOrders((prevOrders) => [...prevOrders, newOrder]);
   };
 
-  return { products, totalPrice, orders, handleAddToOrder };
+  // Remover pedido da lista
+  const handleRemoveOrder = (orderId: string) => {
+    setOrders((prevOrders) => {
+      const updatedOrders = prevOrders.filter((order) => order.id !== orderId);
+  
+      // Encontrar o pedido a ser removido
+      const removedOrder = prevOrders.find((order) => order.id === orderId);
+      if (removedOrder) {
+        setTotalPrice((prevPrice) => {
+          const newPrice = prevPrice - removedOrder.total;
+          return newPrice >= 0 ? newPrice : 0; // Garante que o total não fique negativo
+        });
+      }
+  
+      return updatedOrders;
+    });
+  };
+  
+  
+
+  return { products, totalPrice, orders, handleAddToOrder, handleRemoveOrder };
 }
 
 // Base URL da API
@@ -87,4 +108,3 @@ export const getProducts = async () => {
     throw error; // Repassa o erro para o componente lidar
   }
 };
-

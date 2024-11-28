@@ -10,9 +10,11 @@ interface CarrinhoProps {
   orders: Order[];
   totalPrice: number;
   onClose: () => void; // Função para fechar o modal
+  onRemoveOrder: (orderId: string) => void;
 }
 
-const Carrinho: React.FC<CarrinhoProps> = ({ orders, totalPrice, onClose }) => {
+const Carrinho: React.FC<CarrinhoProps> = ({  orders, totalPrice, onClose, onRemoveOrder}) => {
+
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 ">
       <div className="relative p-4 bg-[#1613129f] rounded-lg shadow-lg max-w-[400px] w-full max-h-[600px] overflow-auto">
@@ -41,6 +43,13 @@ const Carrinho: React.FC<CarrinhoProps> = ({ orders, totalPrice, onClose }) => {
                     <span>
                       {order.titles.join(", ")} - R$ {order.total.toFixed(2)}
                     </span>
+                    <button
+                      onClick={() => onRemoveOrder(order.id)}
+                      className="ml-4 text-red-500 hover:text-red-700"
+                      title="Remover pedido"
+                    >
+                      &#10005;
+                    </button>
                   </li>
                 ))}
               </ul>

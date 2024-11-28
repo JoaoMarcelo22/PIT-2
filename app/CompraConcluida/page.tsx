@@ -8,7 +8,7 @@ import { useOrderService } from '../services/productsService';
 
 export default function CompraConcluida() {
 
-  const { products, totalPrice, orders, handleAddToOrder } = useOrderService();
+  const { products, totalPrice, orders, handleAddToOrder, handleRemoveOrder } = useOrderService();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -40,7 +40,7 @@ export default function CompraConcluida() {
 
           {/* Exibição do Modal */}
           {isModalOpen && (
-            <Carrinho orders={orders} totalPrice={totalPrice} onClose={closeModal} />
+            <Carrinho orders={orders} totalPrice={totalPrice} onClose={closeModal} onRemoveOrder={handleRemoveOrder} />
           )}
         </div>
         <p className="text-[25px] font-bold py-2">Preço Total : R$ {totalPrice.toFixed(2)}</p>
@@ -63,7 +63,7 @@ export default function CompraConcluida() {
       <div className='absolute bottom-[50px] w-[500px] flex justify-around'>
         <div>
         <Link href="/Historico">
-          <img src='Finalizar.png' height="100px" width="200px"/>
+          <img src='Finalizar.png' height="100px" width="200px" onClick={()=>(localStorage.clear())}/>
         </Link>
         </div>
       </div>

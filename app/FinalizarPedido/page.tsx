@@ -8,7 +8,7 @@ import Carrinho from '../components/Carrinho/index';
 import { useOrderService } from '../services/productsService';
 
 export default function FinalizarPedido() {
-  const { products, totalPrice, orders, handleAddToOrder } = useOrderService();
+  const { products, totalPrice, orders, handleAddToOrder,handleRemoveOrder } = useOrderService();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -40,7 +40,7 @@ export default function FinalizarPedido() {
 
           {/* Exibição do Modal */}
           {isModalOpen && (
-            <Carrinho orders={orders} totalPrice={totalPrice} onClose={closeModal} />
+            <Carrinho orders={orders} totalPrice={totalPrice} onClose={closeModal} onRemoveOrder={handleRemoveOrder} />
           )}
         </div>
         <p className="text-[25px] font-bold py-2">Preço Total : R$ {totalPrice.toFixed(2)}</p>
