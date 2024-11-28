@@ -10,17 +10,17 @@ export default function Home() {
       <div className="flex justify-evenly absolute bottom-[50px]  w-[500px]">
         <div>
           <Link href="/Home">
-            <img src="facebook.png" alt="Facebook" className="h-[50px] mx-[5px] z-02" />
+            <img src="facebook.png" alt="Facebook" className="h-[50px] mx-[5px] z-02" width={50} height={50}/>
           </Link>
         </div>
         <div>
           <Link href="/Home">
-            <img src="x.png" alt="Twitter" className="h-[50px] mx-[0px] z-02" />
+            <img src="x.png" alt="Twitter" className="h-[50px] mx-[0px] z-02" width={50} height={50}/>
           </Link>
         </div>
         <div>
         <Link href="/Home">
-            <img src="google.png" alt="google" className="h-[50px] mx-[5px] z-02 " />
+            <img src="google.png" alt="google" className="h-[50px] mx-[5px] z-02 " width={50} height={50} />
         </Link>
         </div>
       </div>
