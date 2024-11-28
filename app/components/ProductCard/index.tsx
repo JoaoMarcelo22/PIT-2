@@ -18,7 +18,7 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToOrder }) => {
   return (
     <div
-      className="h-[120px] flex bg-[#1613129f] rounded-lg cursor-pointer"
+      className="h-[120px] flex bg-[#1613129f] rounded-lg cursor-pointer mt-2"
       onClick={() => onAddToOrder(product)}
     >
       <img
