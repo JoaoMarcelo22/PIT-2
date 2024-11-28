@@ -3,28 +3,28 @@
       "id": 1,
       "name": "Expresso Italiano",
       "price": 10.00,
-      "image": "/Expresso_Italiano.png",
+      "image": "/assets/Expresso_Italiano.png",
       "description": "Um clássico espresso italiano com sabor intenso e aroma marcante, perfeito para os amantes de café forte e encorpado."
     },
     {
       "id": 2,
       "name": "Cappucino de Avelã",
       "price": 12.00,
-      "image": "/Cappucino_de_Avela.png",
+      "image": "/assets/Cappucino_de_Avela.png",
       "description": "Espresso encorpado misturado com leite vaporizado e uma pitada de xarope de avelã, coberto com uma espuma cremosa."
     },
     {
       "id": 3,
       "name": "Macchiato de Amêndoas",
       "price": 15.00,
-      "image": "/Macchiato_de_amendoas.png",
+      "image": "/assets/Macchiato_de_amendoas.png",
       "description": "Espresso encorpado com uma leve camada de espuma de leite e um toque de xarope de amêndoas, proporcionando uma experiência única."
     },
     {
       "id": 4,
       "name": "Affogato Clássico",
       "price": 18.00,
-      "image": "/Affogato_classico.png",
+      "image": "/assets/Affogato_classico.png",
       "description": "Uma bola de sorvete de baunilha 'afogada' em um espresso quente, criando uma deliciosa fusão de sabores."
     }
   ]

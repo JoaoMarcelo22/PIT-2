@@ -25,7 +25,7 @@ export default function Pedidos() {
   }, [orders, totalPrice]);
 
   return (
-    <div className="w-[500px] h-[900px] bg-[url('/pg_02.png')] rounded-3xl m-auto bg-cover bg-no-repeat bg-center">
+    <div className="w-[500px] h-[900px] bg-[url('/assets/pg_02.png')] rounded-3xl m-auto bg-cover bg-no-repeat bg-center">
       <div className="text-center">
         <p className="text-[60px] font-bold mb-10">Café Mania</p>
       </div>
@@ -33,7 +33,7 @@ export default function Pedidos() {
         <div className="App">
           {/* Imagem que abre o modal */}
           <img
-            src="/paymant.svg"
+            src="/assets/paymant.svg"
             alt="Carrinho"
             className="w-12 h-12 cursor-pointer"
             onClick={openModal}
@@ -60,12 +60,12 @@ export default function Pedidos() {
       <div className="absolute bottom-[50px] w-[500px] flex justify-around">
         <div>
           <Link href="/Home">
-            <img src="Voltar.png" height="100px" width="200px" />
+            <img src="assets/Voltar.png" height="100px" width="200px" />
           </Link>
         </div>
         <div>
           <Link href="/FinalizarPedido">
-            <img src="Continuar.png" height="100px" width="200px" />
+            <img src="assets/Continuar.png" height="100px" width="200px" />
           </Link>
         </div>
       </div>

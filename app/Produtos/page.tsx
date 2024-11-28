@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 
 export default function Produtos() {
   return (
-    <div className="w-[500px] h-[900px] bg-[url('/pg_03.png')] rounded-3xl m-auto bg-cover bg-no-repeat bg-center flex-row items-center ">
+    <div className="w-[500px] h-[900px] bg-[url('/assets/pg_03.png')] rounded-3xl m-auto bg-cover bg-no-repeat bg-center flex-row items-center ">
       <div className='text-center'>
       <h1 className="text-[60px] font-bold mb-2">Café Mania</h1>
       </div>
       <div>
         <div className='h-[200px] flex mb-1 bg-[#1613129f]'>
-          <img className='rounded-lg ml-1' src="/Macchiato_de_Amendoas.png" alt="" />
+          <img className='rounded-lg ml-1' src="/assets/Macchiato_de_Amendoas.png" alt="" />
           <div className='flex-row'>
           <div className='text-center text-[20px] font-bold mr-1'>
               <h3>Machiato de Amêndoas</h3>

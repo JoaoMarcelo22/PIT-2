@@ -23,14 +23,14 @@ export default function Pagamento() {
     localStorage.setItem("totalPrice", totalPrice.toString());
   }, [orders, totalPrice]);
   return (
-    <div className="w-[500px] h-[900px] bg-[url('/pg_02.png')] rounded-3xl m-auto bg-cover bg-no-repeat bg-center flex-row items-center ">
+    <div className="w-[500px] h-[900px] bg-[url('/assets/pg_02.png')] rounded-3xl m-auto bg-cover bg-no-repeat bg-center flex-row items-center ">
       <div className='text-center'>
       <p className="text-[60px] font-bold mb-10">Café Mania</p>
       <div className="bg-[#1613129f] h-[60px] p-1 flex justify-between mx-2 mb-5 rounded-lg">
         <div className="App">
           {/* Imagem que abre o modal */}
           <img
-            src="/paymant.svg"
+            src="/assets/paymant.svg"
             alt="Carrinho"
             className="w-12 h-12 cursor-pointer"
             onClick={openModal}
@@ -49,7 +49,7 @@ export default function Pagamento() {
         <h3 className='font-bold text-[30px]'>Pagamento</h3>
       </div>
       <div className='w-[400px] h-[200px] flex justify-center bg-[#1613129f] rounded-lg m-auto mt-4'>
-        <img  className='max-w-[400px] h-full' src="/pix.png" alt="" />
+        <img  className='max-w-[400px] h-full' src="/assets/pix.png" alt="" />
       </div>
         <div className='flex flex-col max-w-[400px] m-auto'>
         <div className='border-neutral-50 border px-1 mt-6 bg-[#1613129f] rounded-lg'>
@@ -79,12 +79,12 @@ export default function Pagamento() {
       <div className='absolute bottom-[50px] w-[500px] flex justify-around'>
         <div>
         <Link href="/FinalizarPedido">
-          <img src='Voltar.png' height="100px" width="200px"/>
+          <img src='/assets/Voltar.png' height="100px" width="200px"/>
         </Link>
         </div>
         <div>
           <Link href="/CompraConcluida">
-          <img src='Continuar.png' height="100px" width="200px"/>
+          <img src='/assets/Continuar.png' height="100px" width="200px"/>
         </Link>
         </div>
       </div>

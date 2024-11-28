@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Historico() {
   return (
-    <div className="w-[500px] h-[900px] bg-[url('/pg_04.png')] rounded-3xl m-auto bg-cover bg-no-repeat bg-center flex-row items-center ">
+    <div className="w-[500px] h-[900px] bg-[url('/assets/pg_04.png')] rounded-3xl m-auto bg-cover bg-no-repeat bg-center flex-row items-center ">
       <div className='text-center  bg-[#1613129f]'>
       <p className="text-[60px] text-[#fff] font-bold mb-5">Café Mania</p>
       </div>
@@ -94,7 +94,7 @@ export default function Historico() {
       </div>
       <div className='absolute bottom-[50px] w-[500px] flex justify-center'>
         <Link href="/Home">
-          <img src='Voltar.png' height="100px" width="200px"/>
+          <img src='/assets/Voltar.png' height="100px" width="200px"/>
         </Link>
       </div>
     </div>

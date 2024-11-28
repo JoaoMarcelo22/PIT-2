@@ -25,14 +25,14 @@ export default function CompraConcluida() {
   }, [orders, totalPrice]);
   
   return (
-    <div className="w-[500px] h-[900px] bg-[url('/pg_02.png')] rounded-3xl m-auto bg-cover bg-no-repeat bg-center flex-row items-center ">
+    <div className="w-[500px] h-[900px] bg-[url('/assets/pg_02.png')] rounded-3xl m-auto bg-cover bg-no-repeat bg-center flex-row items-center ">
       <div className='text-center'>
       <p className="text-[60px] font-bold mb-10">Café Mania</p>
       <div className="bg-[#1613129f] h-[60px] p-1 flex justify-between mx-2 mb-5 rounded-lg">
         <div className="App">
           {/* Imagem que abre o modal */}
           <img
-            src="/paymant.svg"
+            src="/assets/paymant.svg"
             alt="Carrinho"
             className="w-12 h-12 cursor-pointer"
             onClick={openModal}
@@ -63,7 +63,7 @@ export default function CompraConcluida() {
       <div className='absolute bottom-[50px] w-[500px] flex justify-around'>
         <div>
         <Link href="/Historico">
-          <img src='Finalizar.png' height="100px" width="200px" onClick={()=>(localStorage.clear())}/>
+          <img src='/assets/Finalizar.png' height="100px" width="200px" onClick={()=>(localStorage.clear())}/>
         </Link>
         </div>
       </div>
