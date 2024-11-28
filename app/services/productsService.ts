@@ -21,20 +21,26 @@ export interface Order {
 export function useOrderService() {
   const [products, setProducts] = useState<Product[]>([]);
   const [orders, setOrders] = useState<Order[]>(() => {
-    // Carregar os pedidos do localStorage na inicialização
-    const storedOrders = localStorage.getItem("orders");
-    return storedOrders ? JSON.parse(storedOrders) : [];
+    if (typeof window !== "undefined") {
+      const storedOrders = localStorage.getItem("orders");
+      return storedOrders ? JSON.parse(storedOrders) : [];
+    }
+    return [];
   });
   const [totalPrice, setTotalPrice] = useState<number>(() => {
-    // Carregar o preço total do localStorage na inicialização
-    const storedTotalPrice = localStorage.getItem("totalPrice");
-    return storedTotalPrice ? parseFloat(storedTotalPrice) : 0;
+    if (typeof window !== "undefined") {
+      const storedTotalPrice = localStorage.getItem("totalPrice");
+      return storedTotalPrice ? parseFloat(storedTotalPrice) : 0;
+    }
+    return 0;
   });
 
   // Atualizar localStorage quando o estado de pedidos ou totalPrice mudar
   useEffect(() => {
-    localStorage.setItem("orders", JSON.stringify(orders));
-    localStorage.setItem("totalPrice", totalPrice.toString());
+    if (typeof window !== "undefined") {
+      localStorage.setItem("orders", JSON.stringify(orders));
+      localStorage.setItem("totalPrice", totalPrice.toString());
+    }
   }, [orders, totalPrice]);
 
   // Fetch de produtos ao montar o componente
@@ -50,7 +56,6 @@ export function useOrderService() {
     fetchProducts();
   }, []);
 
-  // Função para adicionar um produto ao pedido
   const handleAddToOrder = (product: Product) => {
     setTotalPrice((prev) => prev + product.price);
 
