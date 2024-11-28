@@ -15,12 +15,12 @@ export default function Home() {
         </div>
         <div>
           <Link href="/Home">
-            <img src="/assets/x.png" alt="Twitter" className="h-[50px] mx-[0px] z-02" width={50} height={50}/>
+            <img src="/assets/X.png" alt="Twitter" className="h-[50px] mx-[0px] z-02" width={50} height={50}/>
           </Link>
         </div>
         <div>
         <Link href="/Home">
-            <img src="/assets/google.png" alt="google" className="h-[50px] mx-[5px] z-02 " width={50} height={50} />
+            <img src="/assets/Google.png" alt="google" className="h-[50px] mx-[5px] z-02 " width={50} height={50} />
         </Link>
         </div>
       </div>

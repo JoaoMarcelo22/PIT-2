@@ -32,7 +32,7 @@ export default function FinalizarPedido() {
         <div className="App">
           {/* Imagem que abre o modal */}
           <img
-            src="/paymant.svg"
+            src="/assets/paymant.svg"
             alt="Carrinho"
             className="w-12 h-12 cursor-pointer"
             onClick={openModal}

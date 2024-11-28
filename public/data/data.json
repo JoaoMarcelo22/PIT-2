@@ -17,14 +17,14 @@
       "id": 3,
       "name": "Macchiato de Amêndoas",
       "price": 15.00,
-      "image": "/assets/Macchiato_de_amendoas.png",
+      "image": "/assets/Macchiato_de_Amendoas.png",
       "description": "Espresso encorpado com uma leve camada de espuma de leite e um toque de xarope de amêndoas, proporcionando uma experiência única."
     },
     {
       "id": 4,
       "name": "Affogato Clássico",
       "price": 18.00,
-      "image": "/assets/Affogato_classico.png",
+      "image": "/assets/Affogato_Classico.png",
       "description": "Uma bola de sorvete de baunilha 'afogada' em um espresso quente, criando uma deliciosa fusão de sabores."
     }
   ]
